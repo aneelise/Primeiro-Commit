@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .container {
+    width: 420px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+  }
+  
+  .container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-box {
+    position: relative;
+    margin: 15px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .remember label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .remember a {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #443939;
+    font-size: 13px;
+    color: #4b4040;
+    text-decoration: none;
+  }
+  
+  .remember a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  
+  
+  .login, .modo {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .modo {
+    background-color: #666;
+  }
+  
+  #mensagem {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .input-box {
+    position: relative;
+    margin: 15px 0;
+  }
+  
+  .input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+  }
+  
