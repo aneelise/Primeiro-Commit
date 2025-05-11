@@ -113,3 +113,10 @@
     font-size: 18px;
   }
   
+  .mensagem-erro {
+    color: #ff5050;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  

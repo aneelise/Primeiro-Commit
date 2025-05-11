@@ -18,19 +18,22 @@ function alternarTema() {
   }
   
   //Funçāo que sera chamada para validar o login ao clicar no botao "Login"
-  function validarLogin() {
+  function validarLogin() { 
     const usuario = document.getElementById("usuario").value; //pega o id do usuario e cria uma variavel
     const senha = document.getElementById("senha").value;
+    const mensagemLogin = document.getElementById("mensagemLogin");
   
     if (usuario === "" || senha === "") { 
-      alert("Preencha todos os campos."); //valida se os campos estiverem vazios retorna e mostra a mensagem "Preencha todos os campos."
-      return;
+      mensagemLogin.innerText = "Preencha todos os campos.";
+
     }
   
     if (usuario === "admin" && senha === "1234") { //valida se o login for admin e senha1234 ele mostra "Login bem-sucedido!"
-      alert("Login bem-sucedido!");
+      mensagemLogin.innerText = "Login bem-sucedido!"; //valida a variavel mensagemlogin e troca a mnsagem para "login bem-sucedido"
+      mensagemLogin.style.color = "#00cc66"; // verde
     } else {
-      alert("Usuário ou senha incorretos.");
+      mensagemLogin.innerText = "Usuário ou senha incorretos."; //valida a variavel e troca a mensagem por "usuario ou senha incorretos"
+      mensagemLogin.style.color = "#ff5050"; // vermelho
     }
   }
   
