@@ -10,40 +10,61 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
     transition: background 0.3s, color 0.3s;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   body.dark {
     background-color: #111;
     color: #fff;
   }
-  
-  .container {
-    width: 420px;
+
+  .form-container {
+    width: 70%;
+    max-width: 390px;
     padding: 30px 40px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(253, 197, 29, 0.044);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
   }
+
   
   .container h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+    
   }
   
   .input-box {
     position: relative;
-    margin: 15px 0;
+    margin: 10px 0;
+
+  }
+
+  .input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 20px;
   }
   
   .input-box input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 45px 10px 15px;
     border-radius: 25px;
     border: 1px solid #ccc;
+    box-shadow: 0 0 4px #f7c94844;
     outline: none;
   }
   
@@ -64,11 +85,12 @@
   .remember a {
     padding: 5px 10px;
     border-radius: 20px;
-    background-color: transparent;
-    border: 1px solid #443939;
+    background-color: #f7c948;
+    border: 1px solid #ffd50387;
     font-size: 13px;
-    color: #4b4040;
+    color: #111;
     text-decoration: none;
+    font-weight: 100;
   }
   
   .remember a:hover {
@@ -83,13 +105,21 @@
     padding: 10px;
     border: none;
     border-radius: 25px;
-    background-color: #333;
-    color: white;
+    background-color: #f7c948;
+    color: #111;
+    font-weight: 100;
     cursor: pointer;
   }
   
   .modo {
-    background-color: #666;
+    background-color: #f7c848ad;
+  }
+
+  .login:hover, .modo:hover, .remember a:hover {
+    background-color: #ffd50387;
+    border: 2px solid #f7c948;
+    color: #f7c948;
+    transition: 0.3s;
   }
   
   #mensagem {
@@ -112,6 +142,12 @@
     color: #888;
     font-size: 18px;
   }
+
+  .input-box input {
+    border: 1px solid #f7c948;
+    box-shadow: 0 0 4px #f7c94844;
+  }
+  
   
   .mensagem-erro {
     color: #ff5050;
@@ -120,3 +156,177 @@
     text-align: center;
   }
   
+  /*CSS para divisao de tela*/
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .tela {
+    display: flex;
+    height: 100vh; /* ocupa a tela inteira na vertical */
+  }
+
+  .tela h1 {
+    font-family: "Lobster", sans-serif;
+    color: #897d7d;
+  }
+  .destaque {
+    color: #f7c948;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .lado-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lado-imagem img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+  }
+  
+  .lado-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .imagem-lateral {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    max-height: 80vh;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none; /* evita que a imagem interfira nos cliques */
+  }
+  
+  
+  .checkbox-personalizado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #897d7d;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Remove o checkbox feio padrão no navegador */
+  .checkbox-personalizado input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f7c948;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  /* Efeito ao marcar */
+  .checkbox-personalizado input[type="checkbox"]:checked {
+    background-color: #f7c948;
+  }
+  
+  /* Check (✔) customizado com pseudo-elemento */
+  .checkbox-personalizado input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #111;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+    color: #888;
+    margin: 10px 0;
+  }
+  .social-login i:hover {
+    color: #f7c948;
+    cursor: pointer;
+  }
+  
+  .rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 13px;
+    background-color: transparent;
+    color: #333;
+    z-index: 10;
+  }
+  
+  body.dark .rodape {
+    color: #f0f0f0;
+  }
+  
+/* Estilo para a div com a classe .cadastro*/
+.cadastro, .register-link {
+  text-align: left;  /* Alinha o texto no centro */
+  margin-top: 20px;     /* Adiciona um espaço superior */
+}
+
+/* Estilo para o parágrafo dentro da div */
+.cadastro p, .register-link p {
+  font-size: 14px;           /* Tamanho da fonte */
+  color: #7d7878;               /* Cor do texto */
+}
+
+/* Estilo para o link dentro do parágrafo */
+.cadastro a , .register-link a {
+  color: #f7c948;           /* Cor do link */
+  text-decoration: none;     /* Remove o sublinhado */
+  font-weight: bold;         /* Deixa o link em negrito */
+}
+
+/* Quando o link é hover, ou seja, quando o usuário passa o mouse sobre ele */
+.cadastro a:hover , .register-link a:hover {
+  text-decoration: underline; /* Coloca o sublinhado de volta ao passar o mouse */
+}
+
+.texto-recuperar2 {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+body.dark .texto-recuperar2 {
+  color: #7d7878;
+}
+
+.texto-recuperar1 {
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+body.dark .texto-recuperar1 {
+  color: #f7c948; /* amarelo vibrante no modo escuro */
+}
+

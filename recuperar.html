@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="dark">
+
+  <div class="tela">
+    <div class="lado-imagem">
+      <img src="ilustracao.png" alt="Recuperação de senha" />
+    </div>
+
+    <div class="lado-form">
+      <div class="form-container">
+        <h2 class="texto-recuperar1">Esqueceu sua senha?</h2>
+
+        <p class="texto-recuperar2">Digite seu e-mail e enviaremos um link para redefinir sua senha.</p>
+
+        <div class="input-box">
+          <input type="email" placeholder="Seu e-mail" id="emailRecuperar">
+          <i class='bx bxs-envelope'></i>
+        </div>
+
+        <p id="mensagemRecuperar" class="mensagem-erro"></p>
+
+        <button class="login" onclick="enviarLink()">Enviar</button>
+
+        <p class="register-link">
+          <a href="index.html">Voltar para login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+      <img src="vaso.png" alt="Decoração extra" class="imagem-lateral">
+
+      <script src="script.js"></script>
+
+      <footer class="rodape">
+        <p>&copy; 2025 Pagina login | Todos os direitos reservados.</p>
+      </footer>
+</body>
+</html>
