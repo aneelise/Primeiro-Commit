@@ -4,10 +4,10 @@ Este projeto é uma tela de login desenvolvida com HTML, CSS e JavaScript. Ele p
 
 ✅ Layout responsivo e estilizado  
 ✅ Modo claro e escuro alternável  
-✅ Validação de campos para verificar se o usuário está colocando um e-mail válido e/ou preenchendo todos os campos.
-✅ Ícones visuais
-✅ Funçāo para exibir e ocultar a senha quando clica no icone.
-✅ Funçāo para o esqueci minha senha
+✅ Validação de campos para verificar se o usuário está colocando um e-mail válido e/ou preenchendo todos os campos.  
+✅ Ícones visuais  
+✅ Funçāo para exibir e ocultar a senha quando clica no icone.  
+✅ Funçāo para o esqueci minha senha  
 
 
 ## 🧩 Funcionalidades
