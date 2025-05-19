@@ -19,5 +19,11 @@ Este projeto é uma tela de login desenvolvida com HTML, CSS e JavaScript. Ele p
 
 ## 💡 Observações
 
-Este projeto é uma base para estudos de Front-End com foco em interatividade com o DOM e boas práticas visuais.
-Original e desenvolvimento por mim.
+Este projeto é uma base para estudos de Front-End com foco em interatividade com o DOM e boas práticas visuais.  
+Original e desenvolvimento por mim.  
+  
+![Tela principal](imagens/tela1.png)    
+![Tela principal dark](imagens/tela1dark.png)   
+![Tela de cadastro](imagens/cadastro.png)  
+![Esqueceu a senha](imagens/senha.png)  
+
