@@ -10,15 +10,23 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   
+  <script>
+    // Isso roda ANTES de qualquer conteúdo aparecer, para nao aparecer o "flash" escuro que aparece rapidamente ao trocar de página
+    if (localStorage.getItem("tema") === "escuro") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+  
 </head>
 <body>
 
-  <!-- Container principal que divide a tela em 2 -->
+
+  <!-- Container principal que divide a tela em 2 -->`
   <div class="tela">
 
     <!-- Lado esquerdo com imagem -->
     <div class="lado-imagem">
-      <img src="ilustracao.png" alt="Imagem login" />
+      <img src="imagens/ilustracao.png" alt="Imagem login" />
     </div>
 
     <!-- Lado direito com o formulário -->
@@ -41,18 +49,29 @@
           <i class='bx bx-show' id="toggleSenha" onclick="mostrarSenha()"></i> <!-- onlick "ouve" quando usuario clicar no icone para mostrar a senha, com isso foi preciso tb de um ID -->
           </div>
           <div class="cadastro">
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+            <p>Não tem uma conta? <a href="imagens/cadastro.png">Cadastre-se aqui</a></p>
+
+            <div id="recuperarSenha" class="recuperar-popup">
+              <h2>Esqueceu sua senha?</h2>
+              <p>Digite seu e-mail e enviaremos um link para redefinir sua senha.</p>
+              <input type="email" placeholder="Seu e-mail" id="emailRecuperar" />
+              <input type="email" placeholder="Confirme seu e-mail" id="emailRecuperar">
+              <p id="mensagemRecuperar"></p>
+              <button onclick="enviarLink()">Enviar</button>
+              <button onclick="fecharRecuperar()">Voltar</button>
+            </div>
+            
           
         </div>
 
         <!-- Opção de lembrar + link de esqueci a senha -->
         <div class="remember">
           <label class="checkbox-personalizado"><input type="checkbox" id="lembrarUsuario" /> Lembrar de mim</label>
-          <a href="recuperar.html">Esqueci a senha</a>
+          <a href="#" onclick="abrirRecuperar()">Esqueci a senha</a>
         </div>
         
         <!-- Mensagem de erro de login -->
-        <p id="mensagemLogin" class="mensagem-erro"></p>
+        <p id="mensagemLogin" class="mensagem-feedback"></p>
 
         <!-- Botão de login -->
         <button class="login" onclick="validarLogin()">Login</button>
@@ -61,10 +80,10 @@
         <button class="modo" onclick="alternarTema()">Alternar Tema</button>
 
         <div class="social-login">
-          <i class='bx bxl-twitter'></i>
+          <i class='bx bxl-instagram'></i>
           <i class='bx bxl-facebook'></i>
           <i class='bx bxl-gmail'></i>
-          <i class='bx bxl-google'></i>
+          <i class='bx bxl-whatsapp'></i>
         </div>
         
 
@@ -73,7 +92,7 @@
 
   </div>
 
-  <img src="vaso.png" alt="Decoração extra" class="imagem-lateral">
+  <img src="imagens/vaso.png" alt="Decoração extra" class="imagem-lateral">
 
   <!-- JavaScript -->
   <script src="script.js"></script>

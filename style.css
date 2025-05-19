@@ -15,7 +15,7 @@
     min-height: 100vh;
   }
   
-  body.dark {
+  html.dark {
     background-color: #111;
     color: #fff;
   }
@@ -31,7 +31,7 @@
     color: #111;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
     
   }
 
@@ -146,14 +146,6 @@
   .input-box input {
     border: 1px solid #f7c948;
     box-shadow: 0 0 4px #f7c94844;
-  }
-  
-  
-  .mensagem-erro {
-    color: #ff5050;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
   }
   
   /*CSS para divisao de tela*/
@@ -277,7 +269,7 @@
     z-index: 10;
   }
   
-  body.dark .rodape {
+  html.dark .rodape {
     color: #f0f0f0;
   }
   
@@ -313,7 +305,7 @@
   line-height: 1.5;
 }
 
-body.dark .texto-recuperar2 {
+html.dark .texto-recuperar2 {
   color: #7d7878;
 }
 
@@ -326,7 +318,106 @@ body.dark .texto-recuperar2 {
   letter-spacing: 0.5px;
 }
 
-body.dark .texto-recuperar1 {
+html.dark .texto-recuperar1 {
   color: #f7c948; /* amarelo vibrante no modo escuro */
 }
+
+.recuperar-popup {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+html.dark .recuperar-popup {
+  background: #1b1b1b;
+  color: #f0f0f0;
+}
+
+.recuperar-popup input {
+  padding: 12px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.recuperar-popup button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f7c948;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recuperar-popup button:hover {
+  background-color: #ffe08a;
+}
+
+.bx {
+  transition: transform 0.3s;
+}
+
+.bx:hover {
+  transform: scale(1.2);
+  color: #f7c948;
+}
+
+/* Transições suaves no dark mood para elementos e pags importantes */
+html, input, button, a, .form-container, .rodape, .recuperar-popup {
+  transition: 
+    background-color 0.8s ease,
+    color 0.8s ease,
+    border-color 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.mensagem-feedback {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.mensagem-feedback.ativa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mensagem-feedback.sucesso {
+  background-color: #e8faef;
+  color: #00a149;
+  border: 1px solid #00a1494f;
+}
+
+.mensagem-feedback.erro {
+  background-color: #ffeaea;
+  color: #d10000;
+  border: 1px solid #d1000044;
+}
+
+
 
